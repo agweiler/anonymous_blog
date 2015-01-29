@@ -1,0 +1,37 @@
+<h1> All Our Posts Ever Since the Beginning of Time </h1>
+
+<% @post.each do |x| %>
+
+<p><%=x.id%></p>
+<p><%=x.title%></p>
+<p><%=x.content%></p>
+
+<%end%>
+
+Search posts by title:
+<form action = "/posts/find" method = 'post'>
+<input type= "text" name="title">
+<input type= "submit" value ='get yer post'>
+</form>
+<br>
+Delete posts by title:
+<form action = "/posts/delete" method = 'post'>
+<input type= "text" name="title">
+<input type= "submit" value ='delete yer post'>
+</form>
+<br>
+
+Edit posts by title: <br>
+<form action = "/posts/update" method = 'post'>
+<input type= "text" name="title"><br>
+Insert new content here:<textarea name="update"  rows="4" cols="50">
+  </textarea>
+  <br>
+<input type= "submit" value ='edit yer post'>
+</form>
+<br>
+Search posts by tags:
+<form action = "/tags" method = 'get'>
+<input type= "text" name="name">
+<input type= "submit" value ='get yer post'>
+</form>
